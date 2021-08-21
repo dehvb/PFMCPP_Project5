@@ -100,7 +100,8 @@ struct Dishwasher
     JUCE_LEAK_DETECTOR(Dishwasher)
 };
 
-struct DishwasherWrapper{
+struct DishwasherWrapper
+{
     DishwasherWrapper(Dishwasher* ptr) :
     pointerToDishwasher(ptr)
     {}
@@ -112,7 +113,8 @@ struct DishwasherWrapper{
     Dishwasher* pointerToDishwasher = nullptr;
 };
 
-struct DishesWrapper{
+struct DishesWrapper
+{
     DishesWrapper(Dishwasher::Dishes* ptr) :
     pointerToDishes(ptr)
     {}
@@ -286,7 +288,8 @@ struct Oven
     void printMaxTemp();
 };
 
-struct OvenWrapper{
+struct OvenWrapper
+{
     OvenWrapper(Oven* ptr) :
     pointerToOven(ptr)
     {}
@@ -367,7 +370,8 @@ struct Stove
     void potSizePossibilities();
 };
 
-struct StoveWrapper{
+struct StoveWrapper
+{
     StoveWrapper(Stove* ptr) :
     pointerToStove(ptr)
     {}
@@ -450,7 +454,8 @@ struct KitchenCatalog
     void shippingForAnOven();
 };
 
-struct KitchenCatalogWrapper{
+struct KitchenCatalogWrapper
+{
     KitchenCatalogWrapper(KitchenCatalog* ptr) :
     pointerToKitchenCatalog(ptr)
     {}
@@ -527,7 +532,8 @@ struct KitchenStuff
     void dishwasherTime();
 };
 
-struct KitchenStuffWrapper{
+struct KitchenStuffWrapper
+{
     KitchenStuffWrapper(KitchenStuff* ptr) :
     pointerToKitchenStuff(ptr)
     {}
