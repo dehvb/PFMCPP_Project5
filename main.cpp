@@ -623,7 +623,6 @@ void KitchenStuff::dishwasherTime()
 #include <iostream>
 int main()
 {
-    //Dishwasher and Dishes
     DishesWrapper myDishes(new Dishwasher::Dishes);
     myDishes.pointerToDishes->oiliness = 9001.f;
     DishwasherWrapper dishwasher(new Dishwasher);
@@ -644,7 +643,6 @@ int main()
     std::cout << "here's " << myDishes.pointerToDishes->soupBowls << " soupbowls" << std::endl;
     myDishes.pointerToDishes->soupBowlCounter();
 
-    //Oven
     OvenWrapper oven(new Oven);
     oven.pointerToOven->bakePizza();
     oven.pointerToOven->adjustTemp();
@@ -652,14 +650,12 @@ int main()
     std::cout << "It goes up to " << oven.pointerToOven->highestTemp << " degrees Celsius" << std::endl;
     oven.pointerToOven->printMaxTemp();
 
-    //Stove
     StoveWrapper stove(new Stove);
     stove.pointerToStove->boilWater();
     stove.pointerToStove->cookBigMeal();
     std::cout << "You can use pots with a diameter between " << stove.pointerToStove->smallestDiam << " and " << stove.pointerToStove->largestDiam << " centimeters" << std::endl;
     stove.pointerToStove->potSizePossibilities();
 
-    //KitchenCatalog
     KitchenCatalogWrapper kitchenCatalog(new KitchenCatalog);
     kitchenCatalog.pointerToKitchenCatalog->displayPage(2);
     kitchenCatalog.pointerToKitchenCatalog->displayPage(5);
@@ -668,7 +664,6 @@ int main()
     std::cout << "The shipping for an oven is " << kitchenCatalog.pointerToKitchenCatalog->shippingCost(0, 1, 0) << " Euro" << std::endl;
     kitchenCatalog.pointerToKitchenCatalog->shippingForAnOven();
 
-    //KitchenStuff
     KitchenStuffWrapper kitchenStuff(new KitchenStuff);
     kitchenStuff.pointerToKitchenStuff->usingOven("pizza");
     kitchenStuff.pointerToKitchenStuff->usingStove("water");
